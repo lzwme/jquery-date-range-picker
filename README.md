@@ -187,3 +187,8 @@ $(dom).data('dateRangePicker')
 	.open();	// open date range picker overlay
 	.destroy();	// destroy all date range picker related things
 ```
+
+###Development###
+	npm install grunt-cli -g
+	npm install
+	grunt watch

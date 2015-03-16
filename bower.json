@@ -1,0 +1,15 @@
+{
+	"name": "jquery-date-range-picker",
+	"version": "0.0.5",
+	"main": [
+		"dist/js/jquery.daterangepicker.min.js",
+		"dist/css/daterangepicker.min.css",
+		"dist/css/daterangepicker-bootstrap.min.css"
+	],
+	"dependencies": {
+		"jquery": ">=1.5.1",
+		"moment": ">=2.8.3"
+	},
+	"ignore": ["/.*"]
+}
+

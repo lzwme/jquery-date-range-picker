@@ -250,12 +250,12 @@
 .hide {
 	display: none;
 }
-.date-picker-wrapper .month-wrapper table .day.checked.checkedfrist{
+.date-picker-wrapper .month-wrapper table .day.checked.frist-checked{
 	border-radius: 18px 0 0 18px;
 	background: #7511F3;
 	color: #fff;
 }
-.date-picker-wrapper .month-wrapper table .day.checked.checkedlast{
+.date-picker-wrapper .month-wrapper table .day.checked.last-checked{
 	border-radius: 0 18px 18px 0;
 	background: #7511F3;
 	color: #fff;
