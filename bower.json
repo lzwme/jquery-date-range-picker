@@ -10,6 +10,22 @@
 		"jquery": ">=1.5.1",
 		"moment": ">=2.8.3"
 	},
-	"ignore": ["/.*"]
+	"ignore": [
+		".gitignore",
+		"bower.json",
+		"daterangepicker-bootstrap.css",
+		"daterangepicker.css",
+		"demo.js",
+		"Gruntfile.js",
+		"index.html",
+		"jquery-1.5.1.min.js",
+		"jquery.daterangepicker.js",
+		"moment.js",
+		"moment.min.js",
+		"package.json",
+		"preview-bootstrap.jpg",
+		"preview.jpg",
+		"README.md"
+	]
 }
 
