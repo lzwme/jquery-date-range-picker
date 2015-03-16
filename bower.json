@@ -12,7 +12,6 @@
 	},
 	"ignore": [
 		".gitignore",
-		"bower.json",
 		"daterangepicker-bootstrap.css",
 		"daterangepicker.css",
 		"demo.js",
