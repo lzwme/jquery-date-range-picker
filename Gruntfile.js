@@ -4,6 +4,8 @@ module.exports = function(grunt) {
 		//watching
 		watch: {
 		  options: {
+		  	// Start another live reload server on port 1336
+        	livereload: 1336,
 			atBegin: true
 		  },
 		  js: {

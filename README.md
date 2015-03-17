@@ -192,3 +192,6 @@ $(dom).data('dateRangePicker')
 	npm install grunt-cli -g
 	npm install
 	grunt watch
+
+####Publish####
+	grunt

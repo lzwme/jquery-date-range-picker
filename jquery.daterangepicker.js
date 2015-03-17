@@ -338,10 +338,8 @@
 			maxDays: 0,
 			showShortcuts: true,
 			shortcuts: {
-				//'recent-days': [3, 5, 7],
 				//'prev-days': [1,3,5,7],
 				'next-days': [3, 5, 7],
-				//'recent': [3, 5, 7]
 				//'prev' : ['week','month','year'],
 				'next': ['week', 'month', 'year'],
 				'including-today': true
@@ -362,8 +360,13 @@
 		opt.start = false;
 		opt.end = false;
 
-		if (opt.startDate && typeof opt.startDate === 'string') opt.startDate = moment(opt.startDate, opt.format).toDate();
-		if (opt.endDate && typeof opt.endDate === 'string') opt.endDate = moment(opt.endDate, opt.format).toDate();
+		if (opt.startDate && typeof opt.startDate === 'string') {
+			opt.startDate = moment(opt.startDate, opt.format).toDate();
+		}
+		
+		if (opt.endDate && typeof opt.endDate === 'string') {
+			opt.endDate = moment(opt.endDate, opt.format).toDate();
+		}
 
 		if (opt.singleDate) {
 			opt.showShortcuts = false;
@@ -387,7 +390,7 @@
 		if (opt.alwaysOpen) {
 			_open(0);
 		}
-console.log(open);
+		
 		// expose some api
 		$(this).data('dateRangePicker', {
 			setDateRange: function(d1, d2) {
@@ -912,10 +915,11 @@ console.log(open);
 		function checkSelectionValid() {
 			var days = Math.ceil((opt.end - opt.start) / 86400000) + 1;
 			if (opt.singleDate) { // Validate if only start is there
-				if (opt.start && !opt.end)
+				if (opt.start && !opt.end) {
 					box.find('.drp_top-bar').removeClass('error').addClass('normal');
-				else
+				} else {
 					box.find('.drp_top-bar').removeClass('error').removeClass('normal');
+				}
 			} else if (opt.maxDays && days > opt.maxDays) {
 				opt.start = false;
 				opt.end = false;
@@ -1072,14 +1076,17 @@ console.log(open);
 			box.find('.day').each(function() {
 				var time = parseInt($(this).attr('time'), 10),
 					start = opt.start,
-					end = opt.end;
+					end = opt.end + 2; //adjust 2 ms
+					
 				if (opt.time.enabled) {
 					time = moment(time).startOf('day').valueOf();
 					start = moment(start || moment().valueOf()).startOf('day').valueOf();
 					end = moment(end || moment().valueOf()).startOf('day').valueOf();
 				}
+				
 				if (
-					(opt.start && opt.end && end >= time && start <= time) || (opt.start && !opt.end && moment(start).format('YYYY-MM-DD') === moment(time).format('YYYY-MM-DD'))
+					(opt.start && opt.end && end >= time && start <= time) || 
+					(opt.start && !opt.end && moment(start).format('YYYY-MM-DD') === moment(time).format('YYYY-MM-DD'))
 				) {
 					$(this).addClass('checked');
 				} else {
@@ -1098,6 +1105,7 @@ console.log(open);
 		function showMonth(date, month) {
 			date = moment(date).toDate();
 			var monthName = nameMonth(date.getMonth());
+
 			box.find('.' + month + ' .month-name').html(monthName + ' ' + date.getFullYear());
 			box.find('.' + month + ' tbody').html(createMonthHTML(date));
 			opt[month] = date;
