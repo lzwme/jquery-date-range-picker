@@ -21,7 +21,7 @@
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	background-color: #fff;
-	width: 560px;
+	width: 530px;
 	padding: 5px 12px;
 	font-size: 14px;
 	line-height: 30px;
@@ -30,7 +30,7 @@
 	box-shadow: 3px 3px 10px rgba(150, 230, 250, 0.5);
 }
 .date-picker-wrapper.single-date {
-	width:290px;
+	width:262px;
 }
 .date-picker-wrapper.no-shortcuts { padding-bottom:12px;}
 .date-picker-wrapper .footer
@@ -79,7 +79,7 @@
 }
 .date-picker-wrapper .month-wrapper table
 {
-	/*width:260px;*/
+	/*width:250px;*/
 	float:left;
 }
 .date-picker-wrapper .month-wrapper table.month2
@@ -233,7 +233,7 @@
   width: 180px;
 }
 .time1, .time2 {
-	width: 260px;
+	/*width: 260px;*/
 	padding: 0 5px;
 	text-align: center;
 }
