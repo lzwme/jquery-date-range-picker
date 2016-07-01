@@ -43,7 +43,7 @@
 	color:#666;
 	font-weight:700;
 }
-.date-picker-wrapper a 
+.date-picker-wrapper a
 {
 	color: rgb(107, 180, 214);
 	text-decoration:underline;
@@ -57,7 +57,7 @@
 	color: #fff;
 	background-color: #5bc0de;
 	border-color: #46b8da;
-	
+
 	display: inline-block;
 	margin-bottom: 0;
 	font-weight: normal;
@@ -195,14 +195,14 @@
 .date-picker-wrapper .drp_top-bar .apply-btn
 {
 	position:absolute;
-	right: 0px; 
+	right: 0px;
 	top: 6px;
 	padding:3px 5px;
 	margin:0;
 	font-size:12px;
 	border-radius:4px;
 	cursor:pointer;
-	
+
 	color: #d9eef7;
 	border: solid 1px #357ebd;
 	background: #428bca;
@@ -241,7 +241,7 @@
 	float: left;
 }
 .time2 {
-	float: right;	
+	float: right;
 }
 .hour, .minute {
 	text-align: right;
@@ -250,13 +250,28 @@
 .hide {
 	display: none;
 }
-.date-picker-wrapper .month-wrapper table .day.checked.frist-checked{
+.date-picker-wrapper .month-wrapper table .day.checked.frist-checked {
 	border-radius: 18px 0 0 18px;
 	background: #7511F3;
 	color: #fff;
 }
-.date-picker-wrapper .month-wrapper table .day.checked.last-checked{
+.date-picker-wrapper .month-wrapper table .day.checked.last-checked {
 	border-radius: 0 18px 18px 0;
 	background: #7511F3;
 	color: #fff;
+}
+
+@media only screen and (max-width: 992px) {
+	.date-picker-wrapper {
+		width: 290px
+	}
+	.date-picker-wrapper .gap {
+		display: none !important;
+	}
+	.date-picker-wrapper .month-wrapper table.month2 {
+		float: left;
+	}
+	.date-picker-wrapper .selected-days {
+		display: none !important;
+	}
 }
